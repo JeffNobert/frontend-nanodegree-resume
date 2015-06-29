@@ -170,6 +170,7 @@ function initializeMap() {
 
     // hmmmm, I wonder what this is about...
     google.maps.event.addListener(marker, 'click', function() {
+      infoWindow.open(map, marker);
       // your code goes here!
     });
 
@@ -238,6 +239,6 @@ window.addEventListener('load', initializeMap);
 // Vanilla JS way to listen for resizing of the window
 // and adjust map bounds
 //window.addEventListener('resize', function(e) {
-  // Make sure the map bounds get updated on page resize
+// Make sure the map bounds get updated on page resize
 //  map.fitBounds(mapBounds);
 //});
